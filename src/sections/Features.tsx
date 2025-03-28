@@ -22,7 +22,7 @@ export default function Features() {
             <div className="flex justify-center">
                 <Tag>Features</Tag>
             </div>
-            <h2 className="text-6xl  font-medium text-center mt-6">Where power meets <span className="text-lime-400">simplicity</span> </h2>
+            <h2 className="text-6xl  font-medium text-center mt-6">Where power meets <span className="text-lime-400 lg:block">simplicity</span> </h2>
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-3 ">
                 <FeatureCard title="Real-time Collaboration" desc="Work together seamlessly with conflict-free team editing" className="md:col-span-2 lg:col-span-1">
                     <div className="flex aspect-video justify-center items-center ">
