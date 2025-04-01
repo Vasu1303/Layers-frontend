@@ -5,7 +5,7 @@ import slackLogo from "@/assets/images/slack-logo.svg";
 import relumeLogo from "@/assets/images/relume-logo.svg";
 import framerLogo from "@/assets/images/framer-logo.svg";
 import githubLogo from "@/assets/images/github-logo.svg";
-import Image from "next/image";
+
 import IntegrationCard from "@/components/IntergrationaCard";
 
 const integrations = [
@@ -25,8 +25,11 @@ export default function Integrations() {
             <div className="grid lg:grid-cols-2 items-center lg:gap-16">
 
                 <div>
-                    <Tag>Integeration</Tag>
-                    <h2 className="text-6xl mt-6 font-medium">Plays well with <span className="text-lime-400">others</span> </h2>
+                    <div className="flex justify-center lg:justify-start">
+                        <Tag>Integeration</Tag>
+                    </div>
+                    
+                    <h2 className="text-6xl mt-6 text-center font-medium lg:text-left">Plays well with <span className="text-lime-400">others</span> </h2>
                     <p className="text-white/50 mt-4 text-lg">Layers seamlessly connect with your favorite tools, making it easy to plug into any workflow and collaborate across any platforms.</p>
                 </div>
                 <div>

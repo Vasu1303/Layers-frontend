@@ -5,7 +5,7 @@ import avatar2 from "@/assets/images/avatar-florence-shaw.jpg"
 import avatar3 from "@/assets/images/avatar-lula-meyers.jpg"
 import Image from "next/image";
 import Key from "@/components/Keys";
-import { div } from "framer-motion/client";
+
 const features = [
     "Asset Library",
     "Code Preview",
@@ -26,16 +26,26 @@ export default function Features() {
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-3 ">
                 <FeatureCard title="Real-time Collaboration" desc="Work together seamlessly with conflict-free team editing" className="md:col-span-2 lg:col-span-1">
                     <div className="flex aspect-video justify-center items-center ">
-                        <div className="border border-blue-400 size-20 border-4 rounded-full  p-1 overflow-hidden z-50 bg-neutral-900">
+                        <div className=" border-blue-400 size-20 border-4 rounded-full  p-1 overflow-hidden z-50 bg-neutral-900">
                             <Image src={avatar1} alt="Avatar 1" className="border   rounded-full" />
                         </div>
                        
-                        <div className="border border-purple-400 size-20 overflow-hidden  border-4 rounded-full p-1 -ml-6 z-30 bg-neutral-900">
+                        <div className=" border-purple-400 size-20 overflow-hidden  border-4 rounded-full p-1 -ml-6 z-30 bg-neutral-900">
                             <Image src={avatar3} alt="avatar2" className="border rounded-full" />
                         </div>
-                        <div className="border border-orange-400 size-20 overflow-hidden bg-neutral-900 border-4 rounded-full p-1 -ml-6">
+                        <div className=" border-orange-400 size-20 overflow-hidden bg-neutral-900 border-4 rounded-full p-1 z-40 -ml-6">
                             <Image src={avatar2} alt="avatar2" className="border rounded-full" />
                         </div>
+                        <div className=" border-transparent size-20 overflow-hidden bg-neutral-900 border-4 rounded-full p-1 -ml-6">
+                           
+                            <div className=" size-full bg-neutral-700 rounded-full items-center justify-center inline-flex gap-1">
+                                {Array.from({length:3}).map((_, i)=>(
+                                    <span className="size-1.5 rounded-full bg-white" key={i}></span>
+                                ))}
+
+                            </div>
+                        </div>
+                        
                     </div>
 
                 </FeatureCard>
