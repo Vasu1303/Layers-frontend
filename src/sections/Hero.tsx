@@ -59,7 +59,7 @@ export default function Hero() {
 
             </motion.div>
             {/* <DesignImage src={designExample2Image} type="right" alt="right hero" /> */}
-            <motion.div  ref={rightDesignScope} initial={{opacity:0, y:100, x:100 }} className="absolute -right-64 -top-16">
+            <motion.div  ref={rightDesignScope} initial={{opacity:0, y:100, x:100 }} className="absolute -right-64 -top-16 hidden lg:block">
                 <Image src={designExample2Image} alt="Image2" />
             </motion.div>
             <motion.div ref={rightPointerScope} initial={{opacity:0, y:100, x:300}} className="absolute -top-4 right-80 hidden lg:block">
