@@ -25,7 +25,7 @@ export default function Hero() {
         leftPointerAnimate([
             [leftPointerScope.current, {opacity:1}, {duration:0.5}],
             [leftPointerScope.current, {y:0, x:-100}, {duration: 0.5}],
-            [leftPointerScope.current, {x:0, y:[0,16,0]}, {duration: 0.5}]
+            [leftPointerScope.current, {x:0, y:[0, 16, 0]}, {duration: 0.5}]
 
         ])
         rightDesignAnimate([
@@ -34,7 +34,8 @@ export default function Hero() {
         ])
         rightPointerAnimate([
             [rightPointerScope.current , {opacity:1}, {duration:0.5}],
-            [rightPointerScope.current, {y:0, x:200}, {duration: 0.5}]
+            [rightPointerScope.current, {y:0, x:175}, {duration: 0.5}],
+            [rightPointerScope.current, {x:0, y:[0, 20, 0]}, {duration: 0.5}]
 
         ])
         
