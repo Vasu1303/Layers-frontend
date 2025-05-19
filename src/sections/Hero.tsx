@@ -29,13 +29,13 @@ export default function Hero() {
 
         ])
         rightDesignAnimate([
-            [rightDesignScope.current, {opacity:1}, {duration:0.5}],
+            [rightDesignScope.current, {opacity:1}, {duration:0.5, delay:1.5}],
             [rightDesignScope.current, {y:0, x:0}, {duration:0.5}]
         ])
         rightPointerAnimate([
-            [rightPointerScope.current , {opacity:1}, {duration:0.5}],
+            [rightPointerScope.current , {opacity:1}, {duration:0.5 , delay: 1.5}],
             [rightPointerScope.current, {y:0, x:175}, {duration: 0.5}],
-            [rightPointerScope.current, {x:0, y:[0, 20, 0]}, {duration: 0.5}]
+            [rightPointerScope.current, {x:0, y:[0, 30, 0]}, {duration: 0.5}]
 
         ])
         
@@ -46,8 +46,8 @@ export default function Hero() {
 
             {/* ---------- Made myself a reusable component -------- */}
 
-            <motion.div ref={leftDesignScope} initial={{opacity:0, y:100, x:-100}} className="absolute -left-32 top-16 hidden lg:block">
-                <Image src={designExample1Image} alt="Image1" />
+            <motion.div ref={leftDesignScope} initial={{opacity:0, y:100, x:-100}} drag className="absolute -left-32 top-16 hidden lg:block">
+                <Image draggable="false" src={designExample1Image} alt="Image1" />
 
             </motion.div>
             {/* <motion.div ref={leftDesignScope} initial={{opacity:0 , y:100, x:-100}} >
@@ -55,15 +55,15 @@ export default function Hero() {
 
                 </motion.div> */}
 
-            <motion.div  ref={leftPointerScope} initial={{opacity: 0, y: 100, x:-200}} className="absolute top-96 left-56 hidden lg:block">
-                <Pointer name="vasu" color="red" />
+            <motion.div drag ref={leftPointerScope} initial={{opacity: 0, y: 100, x:-200}} className="absolute top-96 left-56 hidden lg:block">
+                <Pointer  name="vasu" color="red" />
 
             </motion.div>
             {/* <DesignImage src={designExample2Image} type="right" alt="right hero" /> */}
-            <motion.div  ref={rightDesignScope} initial={{opacity:0, y:100, x:100 }} className="absolute -right-64 -top-16 hidden lg:block">
-                <Image src={designExample2Image} alt="Image2" />
+            <motion.div  ref={rightDesignScope} drag initial={{opacity:0, y:100, x:100 }} className="absolute -right-64 -top-16 hidden lg:block">
+                <Image draggable="false" src={designExample2Image} alt="Image2" />
             </motion.div>
-            <motion.div ref={rightPointerScope} initial={{opacity:0, y:100, x:300}} className="absolute -top-4 right-80 hidden lg:block">
+            <motion.div drag ref={rightPointerScope} initial={{opacity:0, y:100, x:275}} className="absolute -top-4 right-80 hidden lg:block">
                 <Pointer name="Kritagya"  />
 
             </motion.div>
