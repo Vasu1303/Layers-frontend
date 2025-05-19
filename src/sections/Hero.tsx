@@ -8,6 +8,7 @@ import Pointer from "@/components/Pointer";
 import { motion, useAnimate } from "framer-motion";
 import { useEffect } from "react";
 import Image from "next/image";
+import cursor from "@/assets/images/cursor-you.svg"
 
 
 
@@ -41,7 +42,9 @@ export default function Hero() {
         
     }, []);
 
-    return <section className="py-24 overflow-x-clip">
+    return <section className="py-24 overflow-x-clip" style={{
+        cursor: `url(${cursor.src}) 0 0, auto`
+    }} >
         <div className="container relative">
 
             {/* ---------- Made myself a reusable component -------- */}
