@@ -35,7 +35,7 @@ export default function Integrations() {
                 <div>
                     <div className="h-[400px] lg:h-[800px]  mt-8 lg:mt-0 overflow-hidden grid md:grid-cols-2 gap-4 masked-element-to-top ">
                         <IntegrationCard integrations={integrations} />
-                        <IntegrationCard integrations={integrations.slice().reverse()} />
+                        <IntegrationCard integrations={integrations.slice().reverse()} reverse />
 
                     
 

@@ -1,5 +1,8 @@
+'use client'
 import FaqBox from "@/components/FaqBox";
 import Tag from "@/components/Tag"
+
+import { useState } from "react";
 const faqs = [
     {
         question: "How is Layers different from other design tools?",
@@ -25,7 +28,9 @@ const faqs = [
 ];
 
 export default function Faqs() {
-    const selectedIndex =0;
+    const [selectedIndex, setSelectedIndex] = useState(1);
+
+
     return (
         <section className="py-24">
             <div className="container ">
@@ -33,9 +38,14 @@ export default function Faqs() {
                     <Tag>Faqs</Tag>
                 </div>
                 <h2 className="text-6xl text-center font-medium  mt-6  max-w-xl mx-auto">Questions? We&apos;ve got <span className="text-lime-400">answers</span> </h2>
-                <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto ">
+                <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto  " >
+
+              
                     {faqs.map((faq, faqIndex)=>(
-                        <FaqBox question={faq.question} answer={faq.answer} key={faqIndex} state={selectedIndex === faqIndex? true : false } />
+                        <div key={faqIndex}  onClick={()=>setSelectedIndex(faqIndex)  }>
+                             <FaqBox  question={faq.question} answer={faq.answer} key={faqIndex} state={selectedIndex === faqIndex? true : false } />
+                        </div>                        
+                       
                 ))}
 
                 </div>
